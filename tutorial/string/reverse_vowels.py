@@ -8,15 +8,15 @@ def reverseVowels(word: str) -> str:
 
     while left < right:
         if word_list[left] not in vowels:
-            left += 1
+            left += 1 # O(1)
             continue
         if word_list[right] not in vowels:
-            right -= 1
+            right -= 1 # O(1)
             continue
 
-        word_list[left], word_list[right] = word_list[right], word_list[left]
+        word_list[left], word_list[right] = word_list[right], word_list[left] # O(1)
 
-        left += 1
+        left += 1 
         right -= 1
 
     return "".join(word_list)
